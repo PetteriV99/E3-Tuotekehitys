@@ -1,0 +1,7 @@
+{
+    "background":"#2d3142",
+    "accent_color":"#65def1",
+    "input_background":"rgba(255, 255, 255, 0.025)",
+    "input_textcolor":"rgba(255,255,255,0.7)",
+    "register_btn_textcolor":"rgba(255,255,255,0.2)"
+}

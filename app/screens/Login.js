@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, View, StyleSheet, TextInput, TouchableOpacity, KeyboardAvoidingView, Image } from 'react-native';
 
+import * as style from '../vars/style.json'
+import * as lang from '../vars/lang_fin.json'
 
 export default function Login({navigation}){
 
@@ -61,10 +63,11 @@ export default function Login({navigation}){
     );
   }
 
+
   const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#2d3142',
+        backgroundColor: style.background,
         padding: 20
         
     },
@@ -82,7 +85,7 @@ export default function Login({navigation}){
         marginBottom: 15
     },
     loginbtn: {
-        backgroundColor: '#65def1',
+        backgroundColor: style.accent_color,
         padding: 15,
         alignItems: 'center',
         borderRadius: 20
@@ -92,16 +95,16 @@ export default function Login({navigation}){
         padding: 5
     },
     offline: {
-        color: 'rgba(255,255,255,0.2)',
+        color: style.register_btn_textcolor,
         textDecorationLine: 'underline'
     },
     input: {
-        backgroundColor: 'rgba(255, 255, 255, 0.025)',
+        backgroundColor: style.input_background,
         height: 50,
-        color: 'rgba(255,255,255,0.7)',
+        color: style.input_textcolor,
         marginBottom: 15,
         paddingHorizontal: 10,
-        borderColor: '#65def1',
+        borderColor: style.accent_color,
         borderStyle: "solid",
         borderBottomWidth: 2,
         borderTopLeftRadius: 5,

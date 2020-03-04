@@ -10,10 +10,10 @@
       "web"
     ],
     "android": {
-        "package": "me.jeqqe.kalleapp",
-        "versionCode": 1,
-        "permissions": [],
-        "icon": "./app/media/python.png"
+      "package": "me.jeqqe.kalleapp",
+      "versionCode": 1,
+      "permissions": [],
+      "icon": "./app/media/python.png"
     },
     "version": "1.0.0",
     "orientation": "portrait",

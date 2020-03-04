@@ -5,7 +5,9 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import LoginScreen from '../screens/Login';
 import RegisterScreen from '../screens/Register';
-import HomeStack from './HomeStack'
+import HomeScreen from '../screens/Home'
+import SettingsScreen from '../screens/Settings'
+import ModulesScreen from '../screens/Modules'
 
 const LoginStack = createStackNavigator();
 
@@ -23,7 +25,13 @@ function loginStack(){
                     name="Register" component={RegisterScreen}
                 />
                 <LoginStack.Screen
-                    name="Home" component={HomeStack}
+                    name="Home" component={HomeScreen}
+                />
+                <LoginStack.Screen
+                    name="Settings" component={SettingsScreen}
+                />
+                <LoginStack.Screen
+                    name="Modules" component={ModulesScreen}
                 />
             </LoginStack.Navigator>
         </NavigationContainer>

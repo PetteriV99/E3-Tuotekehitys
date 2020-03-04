@@ -5,11 +5,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { MaterialCommunityIcons } from 'react-native-vector-icons'
 
 import HomeScreen from '../screens/Home';
-import LevelsScreen from '../screens/Levels';
+//import LevelsScreen from '../screens/Modules';
 import SettingsScreen from '../screens/Settings';
 
 const HomeStack = createMaterialBottomTabNavigator();
 
+
+//
+// EI KÄYTÖSSÄ TÄSSÄ VERSIOSSA
+//
 function homeStack(){
     return(
     
@@ -22,14 +26,6 @@ function homeStack(){
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="home" color={color} size={22} />
-                    ),
-                }}
-            />
-            <HomeStack.Screen
-                name="Levels" component={LevelsScreen}
-                options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="format-list-numbered" color={color} size={22} />
                     ),
                 }}
             />
