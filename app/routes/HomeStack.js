@@ -8,6 +8,9 @@ import HomeScreen from '../screens/Home';
 import LevelsScreen from '../screens/Levels';
 import SettingsScreen from '../screens/Settings';
 
+import LevelsStack from './LevelsStack';
+
+
 const HomeStack = createMaterialBottomTabNavigator();
 
 function homeStack(){
@@ -33,6 +36,9 @@ function homeStack(){
                     ),
                 }}
             />
+            <LevelsStack.Screen
+                    name="Level" component={LevelsStack}
+                />
             <HomeStack.Screen
                 name="Settings" component={SettingsScreen}
                 options={{
