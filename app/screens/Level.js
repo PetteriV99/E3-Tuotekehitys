@@ -7,8 +7,6 @@ import {
   TouchableHighlight,
   TouchableOpacity
 } from 'react-native';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
 //import * as RNFS from 'react-native-fs';
 
 const appName = 'Simplipy';
@@ -71,28 +69,23 @@ class HomeScreen extends React.Component {
 
       
     );
-  }onIncrement = () => {
+  }
+  onIncrement = () => {
     this.setState({
       counter: this.state.counter + 1,
     })
   };
-}const AppNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen,
-    navigationOptions: () => ({
-      title: appName,
-    }),
-  },
-});
+}
 
-const AppContainer = createAppContainer(AppNavigator);
 
-export default function App() {
+
+export default function Level() {
   return (
       <AppContainer />
     );
 
-}const styles = StyleSheet.create({
+}
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
