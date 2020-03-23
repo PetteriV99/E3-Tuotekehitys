@@ -1,0 +1,12 @@
+{
+    "login_user_text":"Käyttäjänimi tai sähköposti",
+    "login_password_text":"Salasana",
+    "home_progress_title":"Eteneminen:",
+    "home_welcome_title":"Tervetuloa",
+    "home_welcome_message":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+    "home_start_training":"Aloita Harjoittelu!",
+    "home_slider_title":"Python liittyvät nettisivut",
+    "home_slider_w3school":"Vestibulum maximus quam est, in vehicula felis ultrices malesuada. Donec faucibus magna aliquet purus porttitor, quis placerat sapien auctor.",
+    "home_slider_python":"Vestibulum maximus quam est, in vehicula felis ultrices malesuada. Donec faucibus magna aliquet purus porttitor, quis placerat sapien auctor.",
+    "home_slider_tutpoint":"Vestibulum maximus quam est, in vehicula felis ultrices malesuada. Donec faucibus magna aliquet purus porttitor, quis placerat sapien auctor."
+}
