@@ -1,34 +1,42 @@
 import React from 'react';
-import { Text, View, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import {
+    Text, 
+    View, 
+    StyleSheet, 
+    TouchableOpacity, 
+    ScrollView, 
+    ImageBackground,
+    MaterialCommunityIcons,
+    Dimensions,
+    Image
+} from 'react-native';
 
+import * as Progress from 'react-native-progress';
+
+import style from '../vars/style'
+import lang from '../vars/lang_fin'
+
+const {height, width} = Dimensions.get("screen")
 
 export default function Home({navigation}){
-<<<<<<< Updated upstream
-=======
-
-    const pressSettings = () => {
-        navigation.navigate("Settings")
-    }
 
     const pressModules = () => {
         navigation.navigate("Modules")
     }
 
->>>>>>> Stashed changes
     return (
-        <View style={styles.container}>
-            
-<<<<<<< Updated upstream
-        </View>
-=======
+        <ScrollView style={styles.container}>
+            <ImageBackground source={require('../media/header.png')} style={styles.top}>
+                <View style={styles.profile}>
+                    <View style={styles.iconbox}>
+                        <Image style={styles.icon}
+                                source={require('../media/avatar.png')}/>
+                    </View>
+
                     <View style={styles.stats}>
                         <Text style={styles.h1}>Etunimi Sukunimi</Text>
                         <Text style={styles.p}>{lang.home_progress_title} 2/105</Text>
-                        <TouchableOpacity style={styles.settings}
-                            onPress={pressSettings}
-                        >
-                            <MaterialCommunityIcons name="settings" color={"white"} size={20} />
-                        </TouchableOpacity>
+                        
                         <Progress.Bar progress={0.1} width={width*0.35} color={style.accent_color} />
                     </View>    
                 </View>
@@ -82,24 +90,18 @@ export default function Home({navigation}){
             </View>
         </ScrollView>
 
->>>>>>> Stashed changes
     );
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-<<<<<<< Updated upstream
-        backgroundColor: '#2d3142',
-        padding: 20
-        
-=======
         backgroundColor: style.background
     },
     settings: {
         position: "absolute",
         top: 25,
-        right: 20,
+        right: 25,
         alignItems: "center",
         justifyContent: "center"
     },
@@ -199,6 +201,5 @@ const styles = StyleSheet.create({
     desc_p: {
         fontSize: 12,
         color: "rgba(255, 255, 255, 0.8)"
->>>>>>> Stashed changes
     }
 })

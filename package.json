@@ -8,10 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-<<<<<<< Updated upstream
-=======
     "@react-native-community/art": "^1.2.0",
->>>>>>> Stashed changes
     "@react-native-community/masked-view": "0.1.5",
     "@react-navigation/material-bottom-tabs": "^5.0.1",
     "@react-navigation/native": "^5.0.1",

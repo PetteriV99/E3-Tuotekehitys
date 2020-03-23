@@ -4,18 +4,11 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { MaterialCommunityIcons } from 'react-native-vector-icons'
 
 import HomeScreen from '../screens/Home';
-<<<<<<< Updated upstream:app/routes/HomeStack.js
-import LevelsScreen from '../screens/Levels';
-=======
->>>>>>> Stashed changes:app/routes/HomeNav.js
 import SettingsScreen from '../screens/Settings';
 import levelNav from './LevelNav';
 
 import * as style from '../vars/style.json'
 
-<<<<<<< Updated upstream:app/routes/HomeStack.js
-function homeStack(){
-=======
 const HomeStack = createMaterialBottomTabNavigator();
 
 //
@@ -24,7 +17,6 @@ const HomeStack = createMaterialBottomTabNavigator();
 //
 
 function homeNav(){
->>>>>>> Stashed changes:app/routes/HomeNav.js
     return(
     
         <HomeStack.Navigator
@@ -42,12 +34,6 @@ function homeNav(){
                 }}
             />
             <HomeStack.Screen
-<<<<<<< Updated upstream:app/routes/HomeStack.js
-                name="Levels" component={LevelsScreen}
-                options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="format-list-numbered" color={color} size={22} />
-=======
                 name="Modules"
 
                 component={levelNav}
@@ -55,18 +41,13 @@ function homeNav(){
                     title: "Moduulit",
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="format-list-checkbox" color={color} size={22} />
->>>>>>> Stashed changes:app/routes/HomeNav.js
                     ),
                 }}
             />
             <HomeStack.Screen
-<<<<<<< Updated upstream:app/routes/HomeStack.js
-                name="Settings" component={SettingsScreen}
-=======
                 name="Settings"
 
                 component={SettingsScreen}
->>>>>>> Stashed changes:app/routes/HomeNav.js
                 options={{
                     title: "Asetukset",
                     tabBarIcon: ({ color, size }) => (
