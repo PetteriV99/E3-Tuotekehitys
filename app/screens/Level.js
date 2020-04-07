@@ -1,70 +1,157 @@
 import React from 'react';
-import { 
-  StyleSheet, 
-  Text, 
-  View, 
-  Navigator,
-  TouchableHighlight,
-  TouchableOpacity
-} from 'react-native';
-//import * as RNFS from 'react-native-fs';
+import { Text, View, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import * as style from '../vars/style.json'
 
-const appName = 'Simplipy';
-/*
-RNFS.readFile(filePath, 'ascii').then(res => {
-})
-.catch(err => {
-  
-  console.log(err.message, err.code);
-  
-});
-*/
+const {height, width} = Dimensions.get("screen")
+
+var level = 1;
+var questionbox = "";
+var answer1 = "";
+var answer2 = "";
+var answer3 = "";
+var answer4 = "";
+var correct_answer = 0;
+
 class LevelContainer extends React.Component {
-  
-  
   state = {
     counter: 0,
   }
+
+  
+
+ 
   render() {
+    if(level == 1){
+      questionbox = "Mitä varten Pythonia käytetään?";
+      answer1 = "Web-kehitykseen";
+      answer2 = "Ohjelmien tekemiseen";
+      answer3 = "Matematiikkaan";
+      answer4 = "Systeemien skriptaamiseen";
+      correct_answer = 0;
+    }
+    if(level == 2){
+      questionbox = "Mikä on oikea tapa tulostaa 'Moi, maailma!'";
+      answer1 = "Print('Moi, Maailma!')";
+      answer2 = "'Print('Moi, Maailma!')'";
+      answer3 = "print('Moi, Maailma!')";
+      answer4 = "print(Moi, Maailma!)";
+      correct_answer = 3;
+
+    }
+    if(level == 3){
+      questionbox = "Mitä merkkiä Pythonissa käytetään kommentointia varten?";
+      answer1 = "'";
+      answer2 = "#";
+      answer3 = "*";
+      answer4 = "/";
+      correct_answer = 2;
+
+    }
+    if(level == 4){
+      questionbox = "Kun x = '5', ja tulostat print(x*5), mikä on lopputulos?";
+      answer1 = "55555";
+      answer2 = "25";
+      answer3 = "xxxxx";
+      answer4 = "5";
+      correct_answer = 1;
+
+    }
+    if(level == 6){
+      questionbox = "x  = '10', mitä tapahtuu kun y = int(x)?";
+      answer1 = "x muuttuja muuttuu numerotyyppiin";
+      answer2 = "y muuttuja muuttuu x arvoiseen numerotyyppiin";
+      answer3 = "y muuttuu merkkijonoksi";
+      answer4 = "x muuttuja poistetaan ja asetetaan y muuttujaan";
+      correct_answer = 1;
+
+    }
+    if(level == 7){
+      questionbox = "Onko Pythonissa sama laskujärjestys kuin oikeassa matematiikassa?";
+      answer1 = "Kyllä";
+      answer2 = "Ei";
+      answer3 = "Ei";
+      answer4 = "Ei";
+      correct_answer = 0;
+
+    }
+    if(level == 8){
+      questionbox = "Mikä on tulos, kun 25 / 5.0";
+      answer1 = "5";
+      answer2 = "Virhe";
+      answer3 = "0";
+      answer4 = "5.0";
+      correct_answer = 4;
+
+    }
+    if(level == 9){
+      questionbox = "Mitä seuraavaksi tapahtuu? \n sana = 'Tämä on lause' \n uusiSana = sana + ', joka jatkuu.' \n print(uusiSana)";
+      answer1 = "uusiSana";
+      answer2 = "Tämä on lause, joka jatkuu.";
+      answer3 = "sana, joka jatkuu.";
+      answer4 = "Tulostuksen aikana tulee virhe.";
+      correct_answer = 2;
+
+    }
     const counter = this.state.counter;
 
-    const kysymys1 = "kys?";
-    const kysymys2 = "kys 2?";
-    const kysymys3 = "kys 3?";
-    const kysymysbox = "if (year % 4) == 0: \n     if (year % 100) == 0: \n         if (year % 400) == 0: \n                print'{0} is a leap year'.format(year)) \n            else: \n              print('{0} is not a leap year'.format(year))";
+  
+   
 
+      
 
 
     return (
-      <View style={styles.container}>
-        <Text style={styles.questionbox}>
-          {kysymysbox}
-        </Text>
+     <ScrollView style={styles.container}>
 
-        <Text style={styles.counter}>Vastausten määrä: {counter}</Text>
+        <View style={styles.questionbox}>
+          <Text style={styles.questionbox_info}>
+            {questionbox}
+          </Text>
+        </View>       
+
+
+        <View style={styles.answer_amount}>
+
+            <Text style={styles.counter}>Vastausten määrä: {counter}</Text>
+        </View>
+
+
+
+        <View style={styles.answers}>
+ 
+          <TouchableOpacity style={styles.answer}
+            onPress={this.onIncrement}
+         >
+            <Text style={styles.answer_info}> 1: {answer1}</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.answer}
+            onPress={this.onIncrement}
+        > 
+            <Text style={styles.answer_info}> 2: {answer2}</Text>
+          </TouchableOpacity>
+        </View>
+
+
+
+
+        <View style={styles.answers}>
+          <TouchableOpacity style={styles.answer}
+            onPress={this.onIncrement}
+          >
+         
+            <Text style={styles.answer_info}> 3: {answer3}</Text>
+          </TouchableOpacity>
         
-        <TouchableOpacity 
-          style={styles.floatingButton3}
-          onPress={this.onIncrement}
-        >
-        <Text style={styles.counter}> 3: {kysymys3}</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity 
-          style={styles.floatingButton2}
-          onPress={this.onIncrement}
-        >
-        <Text style={styles.counter}> 2: {kysymys2}</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity 
-          style={styles.floatingButton}
-          onPress={this.onIncrement}
-        >
-        <Text style={styles.counter}> 1: {kysymys1}</Text>
-        </TouchableOpacity>
-
-      </View>
+          <TouchableOpacity style={styles.answer}
+            onPress={this.onIncrement}
+          >
+            <Text style={styles.answer_info}> 4: {answer4}</Text>
+          </TouchableOpacity>
+        
+        </View>
+     </ScrollView>
 
       
     );
@@ -87,67 +174,67 @@ export default function Level() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: style.background
+   
   },
-  floatingButton: {
-    borderWidth: 5,
-    borderColor: 'rgba(0,0,0,0.2)',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'absolute',
-    bottom: 210,
-    width: 300,
-    height: 60,
-    backgroundColor: '#fff',
-    borderRadius: 100,
-  },
-    floatingButton2: {
-    borderWidth: 5,
-    borderColor: 'rgba(0,0,0,0.2)',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'absolute',
-    bottom: 130,
-
-    width: 300,
-    height: 60,
-    backgroundColor: '#fff',
-    borderRadius: 100,
+  answers: {
+    flexDirection: "row",
+    textAlign: "center",
+    justifyContent: "center"
+},
+answer: {
+  backgroundColor: '#157ba6',
+  height: width*0.25,
+  width: width*0.45,
+  margin: 15,
+  padding: 5,
+  borderRadius: 15,
+  textAlign: "center",
+  justifyContent: "center",
+  top: height*0.45
   },
 
-  floatingButton3: {
-    borderWidth: 5,
-    borderColor: 'rgba(0,0,0,0.2)',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'absolute',
-    bottom: 50,
-    width: 300,
-    height: 60,
-    backgroundColor: '#fff',
-    borderRadius: 100,
-    
-  },
+  answer_info: {
+    textAlign: "center",
+    color: "#fff",
+    fontSize: 18
+},
   questionbox:{
     borderWidth: 5,
     borderColor: 'rgba(0,0,0,1)',
-    borderRadius: 10,
-    height: 300,
-    width: 400,
-    bottom: 370,
-    position: 'absolute',
-    justifyContent: 'center',
-    alignItems: 'center',
+    
+
+    height: width*0.85,
+    width: width*0.95,
     backgroundColor: '#999',
-    alignContent: "center",
+    justifyContent: "center",
+
+    position: 'absolute',
+    alignItems: 'center',
     alignSelf: "center",
     
+  },
+
+  questionbox_info:{
+    
+      textAlign: "left",
+      color: "#fff",
+      fontSize: 22,
+      margin: 10,
+      padding: 1,
+
 
 
   },
-  counter: {
-    fontSize: 25,
+  
+  answer_amount:{
+    alignSelf: "center",
+
+    color: "#fff",
+    fontSize: 12,
+    top: height*0.4
+  },
+  counter:{
+    fontSize: 12
   }
 });
