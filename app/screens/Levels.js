@@ -23,11 +23,11 @@ export default function Levels({navigation}){
                     onPress={pressLevel}>
                         <Text style={styles.module_info}>Tehtävä 1</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.module}>
-                        <Text style={styles.module_info}>Tehtävä 2</Text>
+                <TouchableOpacity style={styles.module_locked}>
+                        <Text style={styles.module_info_locked}>Tehtävä 2</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.module}>
-                        <Text style={styles.module_info}>Tehtävä 3</Text>
+                <TouchableOpacity style={styles.module_locked}>
+                        <Text style={styles.module_info_locked}>Tehtävä 3</Text>
                 </TouchableOpacity>
             </View> 
             <View style={styles.modules}>

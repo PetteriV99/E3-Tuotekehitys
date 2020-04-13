@@ -15,14 +15,20 @@ var correct_answer = 0;
 
 class LevelContainer extends React.Component {
   state = {
-    counter: 0,
+    counter: 1,
   }
 
-  
+  onIncrement = () => {
+    this.setState({
+      counter: this.state.counter + 1,
+    })
+  };
 
  
   render() {
-    if(level == 1){
+    var counter = this.state.counter;
+
+    if(counter == 1){
       questionbox = "Mitä varten Pythonia käytetään?";
       answer1 = "Web-kehitykseen";
       answer2 = "Ohjelmien tekemiseen";
@@ -30,7 +36,7 @@ class LevelContainer extends React.Component {
       answer4 = "Systeemien skriptaamiseen";
       correct_answer = 0;
     }
-    if(level == 2){
+    if(counter == 2){
       questionbox = "Mikä on oikea tapa tulostaa 'Moi, maailma!'";
       answer1 = "Print('Moi, Maailma!')";
       answer2 = "'Print('Moi, Maailma!')'";
@@ -39,7 +45,7 @@ class LevelContainer extends React.Component {
       correct_answer = 3;
 
     }
-    if(level == 3){
+    if(counter == 3){
       questionbox = "Mitä merkkiä Pythonissa käytetään kommentointia varten?";
       answer1 = "'";
       answer2 = "#";
@@ -48,7 +54,7 @@ class LevelContainer extends React.Component {
       correct_answer = 2;
 
     }
-    if(level == 4){
+    if(counter == 4){
       questionbox = "Kun x = '5', ja tulostat print(x*5), mikä on lopputulos?";
       answer1 = "55555";
       answer2 = "25";
@@ -57,7 +63,7 @@ class LevelContainer extends React.Component {
       correct_answer = 1;
 
     }
-    if(level == 6){
+    if(counter == 5){
       questionbox = "x  = '10', mitä tapahtuu kun y = int(x)?";
       answer1 = "x muuttuja muuttuu numerotyyppiin";
       answer2 = "y muuttuja muuttuu x arvoiseen numerotyyppiin";
@@ -66,7 +72,7 @@ class LevelContainer extends React.Component {
       correct_answer = 1;
 
     }
-    if(level == 7){
+    if(counter == 6){
       questionbox = "Onko Pythonissa sama laskujärjestys kuin oikeassa matematiikassa?";
       answer1 = "Kyllä";
       answer2 = "Ei";
@@ -75,7 +81,7 @@ class LevelContainer extends React.Component {
       correct_answer = 0;
 
     }
-    if(level == 8){
+    if(counter == 7){
       questionbox = "Mikä on tulos, kun 25 / 5.0";
       answer1 = "5";
       answer2 = "Virhe";
@@ -84,7 +90,7 @@ class LevelContainer extends React.Component {
       correct_answer = 4;
 
     }
-    if(level == 9){
+    if(counter == 8){
       questionbox = "Mitä seuraavaksi tapahtuu? \n sana = 'Tämä on lause' \n uusiSana = sana + ', joka jatkuu.' \n print(uusiSana)";
       answer1 = "uusiSana";
       answer2 = "Tämä on lause, joka jatkuu.";
@@ -93,7 +99,6 @@ class LevelContainer extends React.Component {
       correct_answer = 2;
 
     }
-    const counter = this.state.counter;
 
   
    
@@ -113,7 +118,7 @@ class LevelContainer extends React.Component {
 
         <View style={styles.answer_amount}>
 
-            <Text style={styles.counter}>Vastausten määrä: {counter}</Text>
+            <Text style={styles.counter}>Tehtävä: {counter}</Text>
         </View>
 
 
@@ -156,11 +161,7 @@ class LevelContainer extends React.Component {
       
     );
   }
-  onIncrement = () => {
-    this.setState({
-      counter: this.state.counter + 1,
-    })
-  };
+
 }
 
 
@@ -235,6 +236,6 @@ answer: {
     top: height*0.4
   },
   counter:{
-    fontSize: 12
+    fontSize: 18
   }
 });

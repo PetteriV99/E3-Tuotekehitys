@@ -36,7 +36,7 @@ function levelNav(){
                 component={LevelScreen}
                 options={{
                     headerBackTitleVisible: false,
-                    title: "Tehtävä 1",
+                    title: "Moduuli 1",
                     headerTitleAlign: "center"
                 }}
             />
