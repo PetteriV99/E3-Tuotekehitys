@@ -32,8 +32,7 @@ export default function Levels({navigation}){
             </View> 
             <View style={styles.modules}>
                 
-                <TouchableOpacity style={styles.module_locked}
-                    onPress={pressLevel}>
+                <TouchableOpacity style={styles.module_locked}>
                         <Text style={styles.module_info_locked}>Tehtävä 4</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.module_locked}>
@@ -45,8 +44,7 @@ export default function Levels({navigation}){
             </View> 
             <View style={styles.modules}>
                 
-                <TouchableOpacity style={styles.module_locked}
-                    onPress={pressLevel}>
+                <TouchableOpacity style={styles.module_locked}>
                         <Text style={styles.module_info_locked}>Tehtävä 7</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.module_locked}>
@@ -58,8 +56,7 @@ export default function Levels({navigation}){
             </View> 
             <View style={styles.modules}>
                 
-                <TouchableOpacity style={styles.module_locked}
-                    onPress={pressLevel}>
+                <TouchableOpacity style={styles.module_locked}>
                         <Text style={styles.module_info_locked}>Tehtävä 10</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.module_locked}>

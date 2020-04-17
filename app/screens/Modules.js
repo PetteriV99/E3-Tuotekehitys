@@ -19,45 +19,45 @@ export default function Modules({navigation}){
                     onPress={pressModule}
                 >
                         <Text style={styles.module_name}>Moduuli 1</Text>
-                        <Text style={styles.module_info}>Moduulin Aihe</Text>
+                        <Text style={styles.module_info}>Python Perusteet</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.module_locked}>
-                        <Text style={styles.module.name_locked}>Moduuli 2</Text>
-                        <Text style={styles.module_info_locked}>Moduulin Aihe</Text>
+                        <Text style={styles.module_name_locked}>Moduuli 2</Text>
+                        <Text style={styles.module_info_locked}>Lukittu</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.module_locked}>
-                        <Text style={styles.module.name_locked}>Moduuli 3</Text>
-                        <Text style={styles.module_info_locked}>Moduulin Aihe</Text>
-                </TouchableOpacity>
-            </View>
-            <View style={styles.modules}>
-                
-                <TouchableOpacity style={styles.module_locked}>
-                        <Text style={styles.module.name_locked}>Moduuli 1</Text>
-                        <Text style={styles.module_info_locked}>Moduulin Aihe</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.module_locked}>
-                        <Text style={styles.module.name_locked}>Moduuli 2</Text>
-                        <Text style={styles.module_info_locked}>Moduulin Aihe</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.module_locked}>
-                        <Text style={styles.module.name_locked}>Moduuli 3</Text>
-                        <Text style={styles.module_info_locked}>Moduulin Aihe</Text>
+                        <Text style={styles.module_name_locked}>Moduuli 3</Text>
+                        <Text style={styles.module_info_locked}>Lukittu</Text>
                 </TouchableOpacity>
             </View>
             <View style={styles.modules}>
                 
                 <TouchableOpacity style={styles.module_locked}>
-                        <Text style={styles.module.name_locked}>Moduuli 1</Text>
-                        <Text style={styles.module_info_locked}>Moduulin Aihe</Text>
+                        <Text style={styles.module_name_locked}>Moduuli 4</Text>
+                        <Text style={styles.module_info_locked}>Lukittu</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.module_locked}>
-                        <Text style={styles.module.name_locked}>Moduuli 2</Text>
-                        <Text style={styles.module_info_locked}>Moduulin Aihe</Text>
+                        <Text style={styles.module_name_locked}>Moduuli 5</Text>
+                        <Text style={styles.module_info_locked}>Lukittu</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.module_locked}>
-                        <Text style={styles.module.name_locked}>Moduuli 3</Text>
-                        <Text style={styles.module_info_locked}>Moduulin Aihe</Text>
+                        <Text style={styles.module_name_locked}>Moduuli 6</Text>
+                        <Text style={styles.module_info_locked}>Lukittu</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={styles.modules}>
+                
+                <TouchableOpacity style={styles.module_locked}>
+                        <Text style={styles.module_name_locked}>Moduuli 7</Text>
+                        <Text style={styles.module_info_locked}>Lukittu</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.module_locked}>
+                        <Text style={styles.module_name_locked}>Moduuli 8</Text>
+                        <Text style={styles.module_info_locked}>Lukittu</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.module_locked}>
+                        <Text style={styles.module_name_locked}>Moduuli 9</Text>
+                        <Text style={styles.module_info_locked}>Lukittu</Text>
                 </TouchableOpacity>
             </View>
         </ScrollView>
@@ -68,18 +68,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: style.background
-    },
-    header: {
-        backgroundColor: '#4325',
-        paddingTop: 50,
-        paddingBottom: 10,
-        marginBottom: 20
-    },
-    h1:{
-        color: "#fff",
-        fontSize: 22,
-        textAlign: "center",
-        fontWeight: "bold"
+
+        
     },
     modules: {
         flexDirection: "row",
@@ -87,20 +77,24 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     module: {
-        backgroundColor: '#6578',
-        height: width*0.21,
-        width: width*0.20,
-        margin: 20,
+        backgroundColor: '#157ba6',
+        height: width*0.25,
+        width: width*0.25,
+        margin: 15,
         padding: 6,
-        borderRadius: 10
+        borderRadius: 30,
+        textAlign: "center",
+        justifyContent: "center"
+
+
     },
     module_locked: {
         backgroundColor: '#6572',
-        height: width*0.21,
-        width: width*0.20,
-        margin: 20,
+        height: width*0.25,
+        width: width*0.25,
+        margin: 15,
         padding: 6,
-        borderRadius: 10,
+        borderRadius: 30,
         textAlign: "center",
         justifyContent: "center"
     },
