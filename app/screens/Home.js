@@ -8,7 +8,8 @@ import {
     ImageBackground,
     MaterialCommunityIcons,
     Dimensions,
-    Image
+    Image,
+    Linking
 } from 'react-native';
 
 import * as Progress from 'react-native-progress';
@@ -46,9 +47,9 @@ export default function Home({navigation}){
                 <View style={styles.welcomebox}>
                     <Text style={styles.welcome_text}>{lang.home_welcome_message}</Text>
                 </View>
-                <TouchableOpacity style={styles.modules}>
-                    <Text style={styles.h1}
-                        onPress={pressModules}>
+                <TouchableOpacity style={styles.modules}
+                                onPress={pressModules}>
+                    <Text style={styles.h1}>
                         {lang.home_start_training}   
                     </Text>
                 </TouchableOpacity>
@@ -60,7 +61,9 @@ export default function Home({navigation}){
                                     source={require('../media/w3school.png')}/>
                             <View style={styles.desctiption}>
                                 <TouchableOpacity>
-                                    <Text style={styles.desc_h}>w3school</Text>
+                                    <Text style={styles.desc_h}
+                                        onPress={() => Linking.openURL("https://www.w3schools.com/python/default.asp")}
+                                    >w3school</Text>
                                 </TouchableOpacity>
                                 <Text style={styles.desc_p}>{lang.home_slider_w3school}</Text>
                             </View>
@@ -70,7 +73,9 @@ export default function Home({navigation}){
                                     source={require('../media/pythonsite.png')}/>
                             <View style={styles.desctiption}>
                                 <TouchableOpacity>
-                                    <Text style={styles.desc_h}>Python.org</Text>
+                                    <Text style={styles.desc_h}
+                                        onPress={() => Linking.openURL("https://www.python.org/")}
+                                    >Python.org</Text>
                                 </TouchableOpacity>
                                 <Text style={styles.desc_p}>{lang.home_slider_python}</Text>
                             </View>
@@ -80,7 +85,9 @@ export default function Home({navigation}){
                                     source={require('../media/tutorialspoint.png')}/>
                             <View style={styles.desctiption}>
                                 <TouchableOpacity>
-                                    <Text style={styles.desc_h}>TutorialsPoint</Text>
+                                    <Text style={styles.desc_h}
+                                        onPress={() => Linking.openURL("https://www.tutorialspoint.com/python/index.htm")}
+                                    >TutorialsPoint</Text>
                                 </TouchableOpacity>
                                 <Text style={styles.desc_p}>{lang.home_slider_tutpoint}</Text>
                             </View>
